@@ -19,7 +19,7 @@ def get_shop_list_by_dishes(dishesfd, person_count):
 
 # Создадим словарь
 
-with open("recipes.txt", "rt", encoding="utf-8") as f:
+with open("num1/recipes.txt", "rt", encoding="utf-8") as f:
     dishes = {}
     for line in f:
         dish_name = line.strip()

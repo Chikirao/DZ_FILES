@@ -10,8 +10,8 @@ def readfile(filename):
           data = txt.read()
      return f'{textname}\n{linescount}\n{data}\n'
 
-outtext = open('texts_for_2/out.txt', 'a', encoding='utf-8')
+outtext = open('num2/texts_for_2/out.txt', 'w', encoding='utf-8')
 
-outtext.write(readfile('texts_for_2/1.txt'))
-outtext.write(readfile('texts_for_2/2.txt'))
-outtext.write(readfile('texts_for_2/3.txt'))
+outtext.write(readfile('num2/texts_for_2/1.txt'))
+outtext.write(readfile('num2/texts_for_2/2.txt'))
+outtext.write(readfile('num2/texts_for_2/3.txt'))
