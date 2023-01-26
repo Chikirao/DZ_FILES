@@ -10,12 +10,17 @@ def readfile(filename): # Превращаем инфу с файла в нуж�
           data = txt.read()
      return f'{textname}\n{linescount}\n{data}\n'
 
-outtext = open('num2/out.txt', 'w', encoding='utf-8')
+outtext = open('out.txt', 'w', encoding='utf-8')
 
 # Запишем в выходной файл нужный текст
 
-outtext.write(readfile('num2/texts_for_2/1.txt'))
-outtext.write(readfile('num2/texts_for_2/2.txt'))
-outtext.write(readfile('num2/texts_for_2/3.txt'))
+path = 'num2/texts_for_2'
+files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
+
+for onefile in files:
+     outtext.write(readfile(f'num2/texts_for_2/{onefile}'))
+# outtext.write(readfile('num2/texts_for_2/1.txt'))
+# outtext.write(readfile('num2/texts_for_2/2.txt'))
+# outtext.write(readfile('num2/texts_for_2/3.txt'))
 
 outtext.close # Фенит!
