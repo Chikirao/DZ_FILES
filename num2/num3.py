@@ -10,7 +10,7 @@ def readfile(filename): # Превращаем инфу с файла в нуж�
           data = txt.read()
      return f'{textname}\n{linescount}\n{data}\n'
 
-outtext = open('out.txt', 'w', encoding='utf-8')
+outtext = open('num2/out.txt', 'w', encoding='utf-8')
 
 # Запишем в выходной файл нужный текст
 
